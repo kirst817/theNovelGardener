@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Novel Gardener</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+</head>
+<body>
+   <div class="container-fluid">
+            <header class='jumbotron'>
+              <div class="row heading">
+                     <h1>The Novel Gardener</h1>
+
+                        </div>
+                        <hr>
+            <div class="row nav">
+
+                      <ul class="nav nav-pills">
+
+                        <li role="presentation"><a href="index.html" role="button" aria-haspopup="true" aria-expanded="false">HOME</a></li>
+
+                        <li role="presentation"><a href="about.html">ABOUT</a></li>
+
+                        <li class='contact' role="presentation"><a href="">CONTACT</a></li>
+
+                      </ul>
+
+
+
+              </div>
+            </header>
+  <main class='row mainBox'>
+   <div class='slideBox'>
+     <h1>Create Your Own Vegetable Garden</h1>
+
+     <!-- <img id="beet" src="http://www.clker.com/cliparts/3/a/2/2/1197099920419035461johnny_automatic_beets.svg.hi.png" alt="beets"> -->
+    <img id="vegBox" src="http://a248.e.akamai.net/f/1611/26335/9h/dramsey.download.akamai.com/23572/daveramsey.com/media/common_images/article_images/blog_ai_lg/blog_ai_lg_grow_your_own.jpg" alt="">
+
+   </div>
+
+<!-- SECOND VIEW -->
+
+   <div class='veggie'>
+     <h1>Pick your produce.</h1>
+   </div>
+   <div class='plot'>
+     <h1>Pick your plot.</h1>
+   </div>
+
+<!-- THIRD VIEW -->
+   <div>
+
+     <form action="" id="plotChoices">
+       <h3>Choose your plot size: </h3>
+        <select name="plotChoices" id="plotChoices" multiple="1">
+          <option id='oneRow' value='onRow'>One Row</option>
+          <option id='twoRows' value="twoRows">Two Rows</option>
+          <option id='threeRows' value="threeRows">Three Rows</option>
+        </select>
+     </form>
+   </div>
+
+<div>
+
+        <div name="veggieChoices" id="veggieChoices" >
+          <h3>Choose your veggies: </h3>
+          <input class='veggies' type='checkbox' id='beets' value="1" > beets<br>
+          <input class='veggies'type='checkbox' id='broccoli' value="2"> broccoli<br>
+          <input class='veggies' type='checkbox'id='cabbage' value="3"> cabbage<br>
+          <input class='veggies'type='checkbox' id='carrots' value="4"> carrots<br>
+          <input class='veggies'type='checkbox'id='cauliflower'value="5"> cauliflower<br>
+          <input class='veggies'type='checkbox'id='celery' value="6"> celery<br>
+          <input class='veggies'type='checkbox' id='kale' value="7"> kale<br>
+          <input class='veggies'type='checkbox' id='lettuce' value="8"> lettuce<br>
+          <input class='veggies'type='checkbox' id='onion' value="9"> onion<br>
+          <input class='veggies'type='checkbox' id='pumpkin' value="10"> pumpkin<br>
+          <input class='veggies'type='checkbox' id='snowPeas' value="11"> snowPeas<br>
+          <input class='veggies'type='checkbox' id='spinach' value="12"> spinach<br>
+          <input class='veggies'type='checkbox' id='strawberries' value="13"> strawberries<br>
+          <input class='veggies'type='checkbox' id='tomatoes' value="14"> tomatoes<br>
+          <input class='veggies'type='checkbox' id='zucchini' value="15"> zucchini<br>
+           <button class='btn' id='vegSubmit'>Submit</button>
+        </div>
+</div>
+
+<!-- FOURTH VIEW -->
+   <div>
+
+
+        <div name="veggieChoices" id="veggieChoices2" multiple>
+          <h3>Choose your veggies: </h3>
+          <input class='veggies' type='checkbox'id='beets'value="1"> beets<br>
+          <input class='veggies'type='checkbox' id='broccoli' value="2"> broccoli<br>
+          <input class='veggies' type='checkbox'id='cabbage' value="3"> cabbage<br>
+          <input class='veggies'type='checkbox' id='carrots' value="4"> carrots<br>
+          <input class='veggies'type='checkbox'id='cauliflower'value="5"> cauliflower<br>
+          <input class='veggies'type='checkbox'id='celery' value="6"> celery<br>
+          <input class='veggies'type='checkbox' id='kale' value="7"> kale<br>
+          <input class='veggies'type='checkbox' id='lettuce' value="8"> lettuce<br>
+          <input class='veggies'type='checkbox' id='onion' value="9"> onion<br>
+          <input class='veggies'type='checkbox' id='pumpkin' value="10"> pumpkin<br>
+          <input class='veggies'type='checkbox' id='snowPeas' value="11"> snowPeas<br>
+          <input class='veggies'type='checkbox' id='spinach' value="12"> spinach<br>
+          <input class='veggies'type='checkbox' id='strawberries' value="13"> strawberries<br>
+          <input class='veggies'type='checkbox' id='tomatoes' value="14"> tomatoes<br>
+          <input class='veggies'type='checkbox' id='zucchini' value="15"> zucchini<br>
+           <button class='btn' id='vegSubmit2'>Submit</button>
+        </div>
+
+
+   </div>
+
+   <div>
+
+     <form action="" id="plotChoices2">
+       <h3>Choose your plot size: </h3>
+        <select name="plotChoices" id="plotChoices2" multiple="1">
+          <option id='oneRow' value='oneRow'>One Row</option>
+          <option id='twoRows' value="twoRows">Two Rows</option>
+          <option id='threeRows' value="threeRows">Three Rows</option>
+        </select>
+     </form>
+   </div>
+
+<!-- FIFTH VIEW -->
+ <!-- <h2>Check Out Your New Garden</h2> -->
+
+
+
+
+
+   <div id="recipeDiv" class="PopupDiv">
+       <div class='close'>close</div>
+         <center><h2>Recipes for <span></span></h2></center>
+          <hr>
+         <div id="recipes">
+
+       </div>
+   </div>
+
+<div class='grid'>
+  <center><h3>Your mock-up garden plot</h3></center>
+  <center><h4>Click on a veggie for recipes</h4></center>
+    <section id='grid'>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+    </section>
+</div>
+
+<div class='grid2'>
+<center><h3>Your mock-up garden plot</h3></center>
+<center><h4>Click on a veggie for recipes</h4></center>
+<section id='grid2'>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+       <div class='gridSquare'></div>
+
+</section>
+</div>
+
+<div class='grid3'>
+  <center><h3>Your mock-up garden plot</h3></center>
+  <center><h4>Click on a veggie for recipes</h4></center>
+  <section id='grid3'>
+
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+   <div class='gridSquare'></div>
+</section>
+</div>
+
+<aside class='growingTips'>
+  <h2>Growing Tips</h2>
+
+</aside>
+
+  <div id="growingTips">
+<div class="growingTipInfo">
+    <h5>Beets</h5>
+    <ul>
+      <li>Sow seeds 1/2″ deep directly in garden five to six weeks before last frost.</li>
+      <li>Spacing: Plant seeds 18 per sq. ft., thin to nine plants</li>
+      <li>Plant more in midsummer for a fall harvest</li>
+      <li>Harvest: 45 to 60. Frost-hardy.</li>
+      <li>The longer you wait to harvest, the bigger the beets. Tops and thinnings are flavorful.</li>
+    </ul>
+  </div>
+<div class="growingTipInfo">
+    <h5>Broccoli</h5>
+    <ul>
+      <li>Sow seeds 1/4″ deep indoors, six weeks before last spring frost.</li>
+      <li>Transplant into garden when seedlings have two sets of leaves.</li>
+      <li>Spacing: one plant per sq. ft.</li>
+      <li>Harvest: 50 to 70 days from transplant. Frost-hardy.</li>
+      <li>Row covers are an effective control for cabbage worms.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Cabbage</h5>
+    <ul>
+      <li>Sow seeds indoors 1/4″ deep eight weeks before last frost or outdoors four weeks before last frost.</li>
+      <li>Transplant seedlings into garden four weeks before last spring frost</li>
+      <li>Spacing: one per sq. ft.</li>
+      <li>Harvest: 60 to 105 days, depending on variety. Frost-hardy.</li>
+      <li>Plants prefer cool weather. Hot temperatures can cause heads to split.</li>
+    </ul>
+
+  </div>
+  <div class="growingTipInfo">
+    <h5>Carrots</h5>
+    <ul>
+      <li>Sow seeds in garden 1/4″ deep three weeks before last spring frost.</li>
+      <li>Spacing: Plant 30 seeds per sq. ft.; thin to 16 plants per sq. ft.</li>
+      <li>Replant six to eight weeks before fall frost for late crop.</li>
+      <li>Harvest: 55 to 70 days from seed. Frost-hardy.</li>
+      <li>Before planting, loosen soil to 12″; remove stones and add compost.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo" >
+    <h5>Cauliflower</h5>
+    <ul>
+      <li>Start seedlings indoors ¼ to 1/2″ deep five to six weeks before last spring frost.</li>
+      <li>Transplant into garden after frost.</li>
+      <li>Spacing: one plant per sq. ft.</li>
+      <li>Harvest: 50 to 80 days from transplant. Somewhat frost-hardy.</li>
+      <li>Don't disturb roots when transplanting; keep evenly moist.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Celery</h5>
+    <ul>
+      <li>Sow seeds indoors 10 to 12 weeks before the last frost.</li>
+      <li>Transplant into garden when soil reaches 50 degrees F. and nights stay above 40.</li>
+      <li>Spacing: two per sq. ft.</li>
+      <li>Harvest: 80 to maturity; harvest individual stalks as needed. Frost-hardy.</li>
+      <li>Plants tolerate some shade. Ensure consistent moisture to avoid tough stalks.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Kale</h5>
+    <ul>
+      <li>Sow seeds 1/2" deep indoors eight weeks before last frost or in garden six weeks before last frost.</li>
+      <li>Transplant seedlings into garden up to six weeks before last frost. Very frost-hardy.</li>
+      <li>Spacing: one or two plants per sq. ft., depending on variety. Can be planted midsummer wherever early crops are removed.</li>
+      <li>Harvest: 60 days. Very frost-hardy.</li>
+      <li>Kale can be grown in part shade. It needs plenty of moisture, so mulch well.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Lettuce</h5>
+    <ul>
+      <li>Sow seed indoors 1/4″ deep, eight weeks before last frost or in garden when soil is 50 degrees F.</li>
+      <li>Transplant seedlings when four weeks old.</li>
+      <li>Spacing: Start with five seedlings, eat four as they grow and let one head mature to full size.</li>
+      <li>Plant more lettuce seeds every two to four weeks for a continuous supply.</li>
+      <li>Harvest: 50 days to full size. Edible anytime. Replant every two weeks. Frost-hardy.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Onions</h5>
+    <ul>
+      <li> Start seeds 1/4″ deep indoors 12 weeks before last frost.</li>
+      <li>Transplant plants into garden a month before last frost. If planting sets, plant them 1″ deep.</li>
+      <li>Spacing: nine plants per sq. ft., or plant more densely and then thin and eat small onions.</li>
+      <li>Harvest: 100 to 120 days. Frost-hardy.</li>
+      <li>Onions will not tolerate weeds and require consistent moisture.</li>
+    </ul>
+
+  </div>
+  <div class="growingTipInfo">
+    <h5>Pumpkin</h5>
+    <ul>
+      <li>Start seeds indoors three to four weeks before last frost or sow directly after soil has warmed to 60 degrees F.</li>
+      <li>If transplanting, handle carefully to avoid disturbing roots.</li>
+      <li>Spacing: one per sq. ft. Locate at outer edge of bed and let vines run onto lawn or up a trellis. Smaller pumpkins have shorter vines.</li>
+      <li>For best storage, leave stems long and cut stems cleanly from vine (don’t pull or tear).</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Snow Peas</h5>
+    <ul>
+      <li>Plant outdoors 1″ deep as soon as soil can be worked.</li>
+      <li>Spacing: nine to 16 per sq. ft. Provide support with string or wire trellis.</li>
+      <li>For a fall crop, plant again six to eight weeks before frost.</li>
+      <li>Harvest: 50 to 60 days from planting seeds. Very frost-hardy.</li>
+      <li>Add legume inoculant to soil when planting to increase vigor and yield.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Spinach</h5>
+    <ul>
+      <li>Plant seeds 1/2″ deep directly in garden up to six weeks before last frost.</li>
+      <li>Sow spinach every two weeks in spring and again in late summer for fall crops.</li>
+      <li>Spacing: sow 18 seeds per sq. ft.; thin to nine plants per sq. ft.</li>
+      <li>Harvest: 30 to 40 days from germination. Very frost-hardy.</li>
+      <li>Spinach bolts in hot weather, so harvest early. Keep soil cool and moist with mulch or shade netting.
+  </li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+
+    <h5>Strawberries</h5>
+    <ul>
+      <li>Transplant plants in spring a week or two before the last frost date.</li>
+      <li>Space plants 12" apart. Position carefully, keeping the crown of the plant even with the soil surface.</li>
+      <li>Harvest berries several times a week when they are deep red and "give" slightly.</li>
+      <li>Keep soil moist, but not soggy. Mulch to retain moisture and protect fruit from rot.</li>
+      <li>Divide plants every two to three years.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Tomatoes</h5>
+    <ul>
+      <li>Plant seeds 1/4″ deep indoors, six to eight weeks before last frost.</li>
+      <li>Transplant into garden one to two weeks after last frost or when soil reaches 65 degrees F.</li>
+      <li>Spacing: one plant per sq. ft. Grow early season crops nearby to allow more room later.</li>
+      <li>Harvest: 55 to 100 days from transplanting, depending on variety. Not frost-hardy</li>
+      <li>Remove lower leaves before planting and bury extra stem.</li>
+    </ul>
+  </div>
+  <div class="growingTipInfo">
+    <h5>Zucchini</h5>
+    <ul>
+      <li>Plant seeds 3/4" deep indoors or outdoors two to three weeks after last frost, or when soil is 70 degrees F.</li>
+      <li>Transplant two to three weeks after last frost, or when soil is 70 degrees F.</li>
+      <li>When picked frequently, plants will produce continuously until frost.</li>
+      <li>Spacing: one plant per two sq. ft. for patio-type varieties.</li>
+      <li>Harvest: 30 to 40 days from transplant; 40 to 50 from seed, depending on variety. Not frost-hardy.</li>
+    </ul>
+  </div>
+
+
+    </div>
+
+<div id="veggieImages">
+     <img class='vImage'id='beets'src="http://bit.ly/1SUw17T" alt="beets">
+     <img class='vImage'id='broccoli'src="http://bit.ly/24tFAQk" alt="broccoli">
+     <img class='vImage'id='cabbage'src="http://bit.ly/1X2X4AF" alt="cabbage">
+     <img class='vImage'id='carrots'src="http://bit.ly/1WB1VbR" alt="carrots">
+     <img class='vImage'id='cauliflower'src="http://bit.ly/1Y1MnwF" alt="cauliflower">
+     <img class='vImage'id='celery'src="http://bit.ly/1QLqYSy" alt="celery">
+     <img class='vImage'id='kale'src="http://bit.ly/1W14TaD" alt="kale">
+     <img class='vImage'id='lettuce'src="http://bit.ly/23hs6Vj" alt="lettuce">
+     <img class='vImage'id='onion'src="http://bit.ly/21osAcW" alt="onion">
+     <img class='vImage'id='pumpkin'src="http://bit.ly/1NNbcMt" alt="pumpkin">
+     <img class='vImage'id='snowPeas'src="http://bit.ly/1Y1MFnp" alt="snowPeas">
+     <img class='vImage'id='spinach'src="http://bit.ly/1SEGTHW" alt="spinach">
+     <img class='vImage'id='strawberries'src="http://bit.ly/24tFJTH" alt="strawberries">
+     <img class='vImage'id='tomatoes'src="http://bit.ly/1rqwXYx" alt="tomatoes">
+     <img class='vImage'id='zucchini'src="http://bit.ly/1Ng78o3" alt="zucchini">
+ </div>
+
+ </main>
+</div>
+
+    <footer>
+      <hr>
+      <h5 class="footer">&copy;2016 The Novel Gardener, Inc. All Rights Reserved. </h5>
+      <hr>
+    </footer>
+
+
+</body>
+</html>
