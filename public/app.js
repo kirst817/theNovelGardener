@@ -304,15 +304,23 @@ var growingTips = document.getElementsByClassName('growingTipInfo');
   for (var i = 0; i < growingTips.length; i++) {
     // console.log(growingTips[i]);
     //  if(vegForInfo === clickedVeggie) {
+
     $('.growingTips').append(growingTips[i]);
+    // if(clickedVeggie === vegForInfo){
+    //    var nameInfo = $('.growingTips').append(vegForInfo);
+    //    $(nameInfo).append(growingTipsInfo);
+    //
     // }
   }
 
 var veggieForInfoArr = {};
 var growingTipsByVeggie = document.querySelectorAll('.growingTipInfo h5');
 var growingTipsUl = document.querySelectorAll('.growingTipInfo');
+var growingTipsInfo = document.querySelectorAll('.growingTipInfo ul');
    for (var i = 0; i < growingTipsByVeggie.length; i++) {
      var vegForInfo = growingTipsByVeggie[i].innerText;
+     console.log(growingTipsInfo);
+
     // veggieForInfoArr[] = vegForInfo;
     // console.log(veggieForInfoArr);
         //  $('.growingTips').append($('.growingTipInfo h5').text(clickedVeggie) +growingTipsUl);
@@ -409,7 +417,7 @@ for (i = 0; i < veggiesIdArr.length; ++i) {
 
 var limit = 0;
 function updateLimit(limit){
-$('input').on('change', function(evt) {
+$('input').on('change', function() {
    if($(this).siblings(':checked').length >= limit) {
        this.checked = false;
    }
