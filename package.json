@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kirst817/theNovelGardener/issues"
   },
-  "homepage": "https://github.com/kirst817/theNovelGardener#readme"
+  "homepage": "https://github.com/kirst817/theNovelGardener#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
