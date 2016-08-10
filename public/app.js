@@ -67,8 +67,6 @@ for (var i = 0; i < veggieList.length; i++) {
           $('.close').show();
           $('.growingTips').hide();
 
-
-
         $.ajax({
           method: 'GET',
           url: "https://api.yummly.com/v1/api/recipes?_app_id=" + id + "&_app_key=" + key + "&requirePictures=true&maxResult=300&start="+ ajaxRecipeSearch.startAt +"&q=" + clickedVeggie,
@@ -84,7 +82,7 @@ for (var i = 0; i < veggieList.length; i++) {
 // imageUrlsBySize[90]
 
       };
-    getRecipes(matchedRecipes);
+  getRecipes(matchedRecipes);
       }
 
 
@@ -124,86 +122,112 @@ function getRecipes(matchedRecipes){
 }
 
 //__________________________________________________________
-
-
+firstView();
+secondView();
+thirdView();
+fourthView();
 // FIRST VIEW
 // removes the main slidebox to reveal options
-$('.slideBox').on('click',function(){
-  $('.slideBox').slideUp(1000, function(){
-    $(this).remove();
-    $('.veggie').show();
-    $('.plot').show();
+function firstView(){
+
+  $('.slideBox').on('click',function(){
+    $('.slideBox').slideUp(1000, function(){
+      $(this).remove();
+      $('.veggie').show();
+      $('.plot').show();
+    });
   });
-});
+}
 
 // SECOND VIEW
 // removes the main plot and veggie divs and shows the appropriate select box
+function secondView(){
+
   $('.veggie').on('click', function (){
-  $('.veggie').slideDown(1000, function(){
-    $(this).remove();
-    $('.plot').remove();
-    $('#veggieChoices').show();
+
+    $('.veggie').slideDown(1000, function(){
+
+      $(this).remove();
+      $('.plot').remove();
+      $('#veggieChoices').show();
+    });
   });
-});
- $('.plot').on('click', function (){
-  $('.plot').slideDown(1000, function(){
-    $(this).remove();
-    $('.veggie').remove();
-    $('#plotChoices').show();
+  $('.plot').on('click', function (){
+    $('.plot').slideDown(1000, function(){
+      $(this).remove();
+      $('.veggie').remove();
+      $('#plotChoices').show();
+    });
   });
-});
+}
+
 
 // THIRD VIEW
 // on veggie submit pull up plot options
+function thirdView(){
+
   $('#vegSubmit').on('click', function (){
     event.preventDefault();
     if(veggieChoices.length <= 15 && veggieChoices.length > 10){
       $("#plotChoices2 option[value='twoRows']").remove();
       $("#plotChoices2 option[value='oneRow']").remove();
       $('#veggieChoices').slideDown(1000, function(){
-      $(this).remove();
-      $('#plotChoices2').show();
+        $(this).remove();
+        $('#plotChoices2').show();
       });
     }
     if (veggieChoices.length <= 10 && veggieChoices.length > 6){
       $("#plotChoices2 option[value='oneRow']").remove();
       $("#plotChoices2 option[value='threeRows']").remove();
       $('#veggieChoices').slideDown(1000, function(){
-      $(this).remove();
-      $('#plotChoices2').show();
+        $(this).remove();
+        $('#plotChoices2').show();
       });
     }
     if (veggieChoices.length <= 6 ){
       $("#plotChoices2 option[value='twoRows']").remove();
       $("#plotChoices2 option[value='threeRows']").remove();
       $('#veggieChoices').slideDown(1000, function(){
-       $(this).remove();
+        $(this).remove();
         $('#plotChoices2').show();
       });
     }
 
-});
+  });
+}
 
 // FOURTH VIEW
 //when submit clicked populate appropriate grid
-$('#vegSubmit2').on('click', function (event){
-  event.preventDefault();
-$('#veggieChoices2').slideUp(2000, function(){
-  $(this).remove();
-  $('#veggieChoices2').remove();
+function fourthView(){
+    populateAppropGridOnSubmit();
+    populateAppropGridWhenPlotClicked();
+  };
 
-  });
+  function populateAppropGridOnSubmit(){
 
-});
+    $('#vegSubmit2').on('click', function (event){
+      event.preventDefault();
+      $('#veggieChoices2').slideUp(2000, function(){
+        $(this).remove();
+        $('#veggieChoices2').remove();
 
-//when plot clicked populate appropriate grid
-$('#plotChoices2 option').on('click', function (e){
-$('#plotChoices2').slideUp(1000, function(){
-$('#plotChoices2').remove();
-$('#veggieChoices2').remove();
+      });
 
-  });
-});
+    });
+  }
+
+  //when plot clicked populate appropriate grid
+  function populateAppropGridWhenPlotClicked() {
+
+    $('#plotChoices2 option').on('click', function (e){
+      $('#plotChoices2').slideUp(1000, function(){
+        $('#plotChoices2').remove();
+        $('#veggieChoices2').remove();
+
+      });
+    });
+  }
+
 
 // FIFTH VIEW
 //populate grids based on which was selected
@@ -444,37 +468,6 @@ $("select").change(function() {
         });
 
       });
-//__________________________________________________________________
-//LOCAL STORAGE
-
-// EXAMPLE
-function storeGridLocalStorage(){
-
-
-
-  // if (window.localStorage.myGardenPlot) {
-  //   var myGardenPlot = JSON.parse(window.localStorage.myGardenPlot);
-  //   var myPlot = chosenGrid;
-  //   console.log(myGardenPlot);
-  //   console.log($($cells[i]).append(foundImages[i]));
-  //
-  //   for(var key in myPlot){
-  //     document.getElementById(key).value = myGardenPlot[key];
-  //       }
-  // }
-  // $('.garden button').on('click', function(){
-  //     $('.myGardenPlot').append($($cells[i]).append(foundImages[i]));
-  //     $('.myGardenPlot').show();
-  // })
-}
-
-
-// function addToLocalStorage(){
-//   data = JSON.stringify(myPlot);
-//   window.localStorage.myGardenPlot = data
-//   console.log(data);
-// }
-// addToLocalStorage();
 //________________________________________________________________________
 //MORE AJAX CALL STUFFF
 
